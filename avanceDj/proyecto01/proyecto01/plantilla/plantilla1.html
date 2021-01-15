@@ -1,0 +1,21 @@
+<html>
+    <body>
+        {% include "barra.html" %}
+    <h1 style="color: red">
+    hola amiga estas bien helowwwwwww
+    </h1>
+    <p> {{nombre_p}} y mi apellido es: {{apellido_p.upper}} a las {{fecha}}</p>
+    <p><strong>temas del curso</strong> </p>
+    <p>
+        <ul>
+            {% if tema %}
+            {% for it_tema in tema %}
+                <li>{{it_tema}}</li>
+            {% endfor %}
+            {% else %}
+                <p> no hay elementos que mostrar</p>
+            {% endif %}
+        </ul>
+    </p>
+    </body>
+</html>
