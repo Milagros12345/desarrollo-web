@@ -1,0 +1,22 @@
+tenemos dos ventanas vista del usuario y vista del cliente
+compile
+//vista del cliente
+1 flask run
+copiar url http://127.0.0.1:5000/ 
+existen botones
+# contacto : te lleva a la ventana de contacto
+#información : te lleva a la información 
+# inscribirse a un evento: te lleva a un formulario para completar, esta es una nueva ventana
+
+//vista del administrador
+
+1 flask run
+2 copiar url http://127.0.0.1:5000/admi_login
+    para crear un nuevo usuario del administrador(solo uno)
+    para acceder a login vas a login 
+3 estando en login escribes lo que te pide:ejm
+    usuario: admin 
+    contraseña: 1234
+4 al presionar "ingresar" te lleva a una ventana donde puedes ver eventos
+    en donde puedes añadir evento y hacer algunas consultas
+

@@ -1,0 +1,51 @@
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="imagen/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+    <img src="{{ url_for('static', filename='materiales/rec.jpg') }}" alt="Arequipa conferencia" width="1000" height="500">
+    <div class="container-fluid">
+        <h1>EVENTOS BUGEVENTS </h1>
+        <p>Te damos la bienvenida, Bugevents es una institución que organiza eventos educativos. Esta institución comprometida en mantener 
+          actualizado tanto de la tecnologia y de temás de interes académico, Trabajamos con universidades públicas y orivadas
+        de diferentes nacionalidades, también universidades extrangeras dentro de ello tenemos estas actividades: </p>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md bg-info"><h3>CONGRESO:</h3><p> es un tipo de evento donde se hace una confrontación entre un grupo de personas de la misma 
+            especialidad y/o interés. De esta manera haciendo un intercambio de experiencias, opiniones, toma de decisiones,
+             problemas y/o planeación. Las tecnicas que se emplean son: conferencias, mesasredonda, talleres de trabajo.</p></div>
+          <div class="col-md bg-primary"><h3>FORO: </h3><p>es un evento donde un grupo en su totalidad discute un tema, hecho o problema, conducido por un coordinador.
+          </p></div>
+          <div class="col-md bg-info"><h3>TALLER : </h3><p> es un evento donde el profesor o instructor transmite la 
+            información   la cual debe estar relacionada con lo que el participante realiza habitualmente por medio de
+             asesorías y por medio de varias técnicas de aprendizaje. admite grupos pequeños de 10 a 30 participantes.
+          </p></div>
+        </div>  
+      </div>
+      <br>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md bg-success">
+          <h3>CONVENCION :</h3><p>es un evento donde se exponen diferentes situaciones de un tema 
+            general y/o específico, y además se llega a una decisión o propuesta.</p>
+        </div>
+        
+          <div class="col-md bg-primary">
+            <h3>El SEMINARIO:</h3><p>en este evento académico se expone lo más reciente de
+               temas generales con conferencistas previamente seleccionados.</p>
+          </div>
+        </div>
+    </div><br>
+    <button type="button" class="btn btn-primary" ><a href="{{ url_for('vista_prin')}}">Atrás</a></button><br>
+</body>
+</html>

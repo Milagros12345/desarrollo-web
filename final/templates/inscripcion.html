@@ -1,0 +1,58 @@
+
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="imagen/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inscrip.css') }}">
+    
+</head>
+<body>
+<form action="{{url_for('add_inscripcion') }}" method="post">
+  <div class="contenedor_imagen">
+    <img src="{{ url_for('static', filename='materiales/perfil.png') }}" alt="perfil" class="perfil">
+  </div>
+
+  <div class="form-group" class="was-validated">
+    <label for="nombre"><b>nombre:</b></label>
+    <input type="text" placeholder="Ingrese su nombre" name="name" required>
+    <br>
+    <label for="AP"><b>Apellido Paterno:</b></label>
+    <input type="text" placeholder="Ingrese Apellido " name="Ap" required>
+    <br>
+    <label for="AM"><b>Apellido Materno:</b></label>
+    <input type="text" placeholder="Ingrese Apellido " name="Am" required>
+    <br>
+    <label for="DNI"><b>N° DNI:</b></label>
+    <input type="text" placeholder="DNI " name="DNI" required>
+    <br>
+    <label for="Email"><b>Email:</b></label>
+    <input type="email"  placeholder="name@example.com"name="email" required>
+    <br><br>
+    <label for="categoria"><b>Categoria:</b></label>
+    <label class="radio-inline">
+      <input type="radio" name="op" value="Estudiante" checked >Estudiante
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="op" value="Profesional">Profesional
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="op" value="Colaborador">Colaborador
+    </label>
+    <br>
+    <label for="eventoEligido"><b>Eliga el evento</b></label>
+    <select class="form-control" name="evento_id">
+        {% for evento in eventos %}
+            <option value="{{ evento.id }}">{{ evento.nombre }}  en: {{ evento.ubicacion }}</option>
+        {% endfor %}
+    </select>
+    <br><br><br>
+    <button class="btn btn-primary" type="submit">Inscribir</button>
+  </div>
+</form>
+
+</body>
+</html>

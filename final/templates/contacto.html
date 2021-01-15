@@ -1,0 +1,50 @@
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="imagen/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>CONTACTO</h1>
+    <p>Mediante el siguiente formulario puedes hacernos llegar tu consulta:
+    El deseo de BUGEVENTS es que usted siempre este actualizado por todo el territorio nacional 
+    y dentro del marco del Sistema Nacional de Educación .
+    Si quieres saber más de lo que hacemos en la BUGEVENTS, participar o colaborar en la misma u otra consulta,
+     no dudes en rellenar el presente formulario y nos pondremos en contacto contigo lo antes posible.</p>
+     <form>
+        <div class="form-group" class="was-validated">
+            <label for="email"><b>Email</b></label>
+            <input type="email"  placeholder="name@example.com"name="email" required>
+          </div>
+        <div class="form-group" class="was-validated">
+            <label for="nombre"><b>Nombre:</b></label>
+            <input type="text" placeholder="Ingrese su Nombre" name="name" required>
+        </div>
+        <div class="form-group" class="was-validated">
+            <label for="apellido"><b>Apellido:</b></label>
+            <input type="text" placeholder="Ingrese su Apellido" name="apellido" required>
+        </div>
+        <div class="form-group" class="was-validated">
+            <label for="trabajo"><b>Centro de trabajo</b></label>
+            <input type="text" placeholder="Ingrese su centro de trabajo" name="trabajo" required>
+        </div>
+        <div class="form-group" class="was-validated">
+            <label for="teléfono"><b>Teléfono:</b></label>
+            <input type="text" placeholder="Ingrese su teléfono" name="telefono" required>
+        </div>
+        <div class="form-group">
+            <label for="consulta"><b>consulta</b></label><br>
+            <textarea  name="consulta" rows="3" ></textarea>
+        </div>
+        <div class="enviar">
+            <button type="button" class="btn btn-primary"><a href="{{ url_for('vista_prin')}}">Atrás</a></button>
+            <button type="button" class="btn btn-info"><a href="{{ url_for('vista_prin')}}">consultar</a></button>
+        </div>
+      </form>
+</body>
+</html>

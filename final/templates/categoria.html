@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{% block body %}
+<br>
+<h1>Inscritos por evento</h1>
+<div class="container">    
+  <a href="{{url_for('volver') }}" class="btn btn-info">OK</a>      
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Categoria</th>
+          <th>Cantidad</th>
+          <th>Evento</th> 
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>Estudiantes</td>
+            <td>{{can1}}</td>
+            <td>{{id_e}}</td> 
+          </tr>
+          <tr>
+            <td>Profesionales</td>
+            <td>{{can2}}</td>
+            <td>{{id_e}}</td> 
+          </tr>
+          <tr>
+            <td>Colaboradores</td>
+            <td>{{can3}}</td>
+            <td>{{id_e}}</td> 
+          </tr>
+      </tbody>
+    </table>
+    <h3>Total: {{total}}</h3>
+    <h3>Monto Total: </h3>
+  </div>  
+{% endblock %}
+
+      

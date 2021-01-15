@@ -1,0 +1,79 @@
+{% extends "index.html" %}
+{% block body %}
+<br>
+<div class="container">
+  <a href="{{url_for('aniadir_evento') }}" class="btn btn-info">añadir evento</a>
+  <a href="{{url_for('mostrar_evento') }}" class="btn btn-info">ver todos los eventos</a>
+  <a href="{{url_for('mostrar_participantes') }}" class="btn btn-info">ver los participantes</a>
+  <a href="{{url_for('admi_login') }}" class="btn btn-info">volver a inicio</a>
+  <nav class="navbar navbar-light bg-light ">
+    <a class="navbar-brand">Ver inscrito por evento, coloca el id del evento</a>
+    <form class="form-inline" action="{{url_for('search_prt_evnt')}}" method="post">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="id">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">buscar</button>
+    </form>
+  </nav>
+  <nav class="navbar navbar-light bg-light ">
+    <a class="navbar-brand">Ver categoria por evento, coloca el id del evento</a>
+    <form class="form-inline" action="{{url_for('views_categoria')}}" method="post">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="ide">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">buscar</button>
+    </form>
+  </nav>
+  <nav class="navbar navbar-light bg-light ">
+    <a class="navbar-brand">nombre del evento</a>
+    <form class="form-inline" action="{{url_for('search_name')}}" method="post">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nombre">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">buscar</button>
+    </form>
+  </nav>
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand">fecha del evento</a>
+    <form class="form-inline"  action="{{url_for('search_fecha')}}" method="post">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="fecha">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">buscar</button>
+    </form>
+  </nav>
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand">lugar del evento</a>
+    <form class="form-inline"  action="{{url_for('search_ubicacion')}}" method="post">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="lugar">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">buscar</button>
+    </form>
+  </nav>
+</div>
+
+<div class="container">
+    <h2>{{nombre}}</h2>            
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Ubicación</th>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Monto</th>
+          <th>opción</th> 
+        </tr>
+      </thead>
+      <tbody>
+        {% for evento in eventos %}
+          <tr>
+            <td>{{evento.id}}</td>
+            <td>{{evento.nombre}}</td>
+            <td>{{evento.ubicacion}}</td>
+            <td>{{evento.fecha}}</td>
+            <td>{{evento.hora}}</td>
+            <td>{{evento.monto}}</td>
+            <td><a href="{{ url_for('go_edit_event',id=evento.id)}}" class="btn btn-secondary">edit</a>
+              <a href="{{ url_for('delete_event',id=evento.id)}}" class="btn btn-secondary">delete</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>  
+{% endblock %}
+
+      

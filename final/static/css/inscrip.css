@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #05a36f;
+  }
+  
+  .contenedor_imagen {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  img.perfil {
+    width: 15%;
+    border-radius: 50%;
+  }
+  
+  .usuario {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 10px;
+    cursor: pointer;
+    color: blue;
+  }
+  
+  input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #14c2e0;
+    text-align: center;
+    color: #0f0101;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 50px 0px;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+  }
+  button:hover {
+    opacity: 0.50;
+  }
+  
+  .cancelbtn {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #0dd8f3;
+  }
+  
+  img.chat {
+    width: 15%;
+    float: right;
+    height: 50%;
+  }
+  
+  img.chatf {
+    width: 10%;
+    float: right;
+  }
+  .form-group{
+    text-align: left;
+    background-color: #ccc;
+    margin: auto;
+    padding: 10px;
+    width: 400px;
+  }
+  .form{
+    width: 600px;
+  }

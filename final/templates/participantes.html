@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% block body %}
+
+<div class="container">
+    <a href="{{url_for('volver') }}" class="btn btn-info">OK</a>
+    <h2>Participantes</h2>            
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>DNI</th>
+          <th>Nombre y Apellido</th>
+          <th>categoria</th>
+          <th>Email</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in part %}
+          <tr>
+            <td>{{p.dni}}</td>
+            <td>{{p.nombre}} {{p.apellido_p}} {{p.apellido_m}}</td>
+            <td>{{p.categoria}}</td>
+            <td>{{p.email}}</td>
+            
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>  
+{% endblock %}
